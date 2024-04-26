@@ -11,28 +11,117 @@
 
 
 $conn = new mysqli($servername, $username, $password, $database, $port);
+// if(!$conn){  
+// 	echo "<script type='text/javascript'>alert('Database failed');</script>";
+//   	die('Could not connect: '.mysqli_connect_error());  
+// }
+// if (isset($_POST['submit']))
+// {
+// $trains=$_POST['trains'];
+// $sql = "SELECT t_no FROM trains WHERE t_name = '$trains'";
+// $result = mysqli_query($conn, $sql);
+// $row = mysqli_fetch_assoc($result);
+// $email=$_SESSION['user_info'];
+// $query="UPDATE passengers SET t_no='$row[t_no]' WHERE email='$email';";
+// 	if(mysqli_query($conn, $query))
+// {  
+// 	$message = "Ticket booked successfully";
+// }
+// 	else {
+// 		$message="Transaction failed";
+// 	}
+// 	echo "<script type='text/javascript'>alert('$message');</script>";
+// }
+
+
+
+
+
+
+
+
+// if(!$conn){  
+//     echo "<script type='text/javascript'>alert('Database failed');</script>";
+//     die('Could not connect: '.mysqli_connect_error());  
+// }
+
+// if (isset($_POST['submit'])) {
+//     $trains = $_POST['trains'];
+//     $sql = "SELECT t_no FROM trains WHERE t_name = '$trains'";
+//     $result = mysqli_query($conn, $sql);
+//     $row = mysqli_fetch_assoc($result);
+//     $email = $_SESSION['user_info'];
+//     $query = "UPDATE passengers SET t_no='$row[t_no]' WHERE email='$email';";
+//     if(mysqli_query($conn, $query)) {  
+//         // Redirect to reser.php
+//         header('Location: reser.php');
+//         exit(); // Terminate the script after redirection
+//     } else {
+//         $message = "Transaction failed";
+//         echo "<script type='text/javascript'>alert('$message');</script>";
+//     }
+// }
+// 
+
+
+
+
+
 if(!$conn){  
-	echo "<script type='text/javascript'>alert('Database failed');</script>";
-  	die('Could not connect: '.mysqli_connect_error());  
+    echo "<script type='text/javascript'>alert('Database failed');</script>";
+    die('Could not connect: '.mysqli_connect_error());  
 }
-if (isset($_POST['submit']))
-{
-$trains=$_POST['trains'];
-$sql = "SELECT t_no FROM trains WHERE t_name = '$trains'";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$email=$_SESSION['user_info'];
-$query="UPDATE passengers SET t_no='$row[t_no]' WHERE email='$email';";
-	if(mysqli_query($conn, $query))
-{  
-	$message = "Ticket booked successfully";
+
+if (isset($_POST['submit'])) {
+    if(empty($_POST['trains'])) {
+        $message = "Please select a train";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+    } else {
+        $trains = $_POST['trains'];
+        $sql = "SELECT t_no FROM trains WHERE t_name = '$trains'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $email = $_SESSION['user_info'];
+        $query = "UPDATE passengers SET t_no='$row[t_no]' WHERE email='$email';";
+        if(mysqli_query($conn, $query)) {  
+            // Redirect to reser.php
+            header('Location: reser.php');
+            exit(); // Terminate the script after redirection
+        } else {
+            $message = "Transaction failed";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        }
+    }
 }
-	else {
-		$message="Transaction failed";
-	}
-	echo "<script type='text/javascript'>alert('$message');</script>";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

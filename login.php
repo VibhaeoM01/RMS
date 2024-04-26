@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 session_start();
 $servername = "localhost";
 $port = 3307; // Adjust the port as needed
