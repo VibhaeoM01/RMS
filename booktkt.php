@@ -5,11 +5,14 @@
 	$username = "root";
 	$password = "";
 	$database= "final";
+	// if(empty($_SESSION['user_info'])){
+	// 	echo "<script type='text/javascript'>alert('Please login before proceeding further!');</script>";
+	// }
+
 	if(empty($_SESSION['user_info'])){
-		echo "<script type='text/javascript'>alert('Please login before proceeding further!');</script>";
+		echo "<script type='text/javascript'>alert('Please login before proceeding further!');
+		window.location.href = 'login.php';</script>";
 	}
-
-
 $conn = new mysqli($servername, $username, $password, $database, $port);
 // if(!$conn){  
 // 	echo "<script type='text/javascript'>alert('Database failed');</script>";
@@ -138,9 +141,10 @@ if (isset($_POST['submit'])) {
 			padding-left: 50px;
 			background-color: rgba(0,0,0,0.3);
 			border-radius: 25px;
+			float:
 		}
 		html { 
-		  background: url(img/bg7.jpg) no-repeat center center fixed; 
+		  background: url(img/bg44.jpg) no-repeat center center fixed; 
 		  -webkit-background-size: cover;
 		  -moz-background-size: cover;
 		  -o-background-size: cover;
@@ -179,9 +183,9 @@ if (isset($_POST['submit'])) {
 	?>
 	<div id="booktkt">
 	<h1 align="center" id="journeytext">Choose your journey</h1><br/><br/>
-	<form method="post" name="journeyform" onsubmit="return validate()">
+	<form method="post" name="journeyform" onsubmit="return validat	e()">
 		<select id="trains" name="trains" required>
-			<option selected disabled>-------------------Select trains here----------------------</option>
+			<option selected disabled>--------Select trains here--------</option>
 			<option value="rajdhani" >Rajdhani Express - Mumbai Central to Delhi</option>
 			<option value="duronto" >Duronto Express - Mumbai Central to Ernakulum</option>
 			<option value="geetanjali">Geetanjali Express - CST to Kolkata</option>

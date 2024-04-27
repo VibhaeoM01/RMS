@@ -224,13 +224,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passenger Details</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .display
+        {
+
+            
+            background-color:transparent;
+            border-radius:10px;
+             height:415px;height: 250px;
+            border: 1px solid;
+            margin: 100px 250px;
+      
+
+             width: 700px;
+             padding: 8px; 
+        }
+        .btn-info
+        {
+            color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #49afcd;
+    border:1px #49afcd;
+    padding:3px;
+    margin: 16px;
+        }
+        html { 
+		  background: url(img/bg66.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}   
+    </style>
 </head>
 <body>
-
-<div class="display" style="margin-top:0px;height:415px;">
+<?php
+		include ('header.php');
+	?>
+                    <h1 style="text-align: center;">Provide your information</h1>
+<div class="display">
     <h2><font color="blue">Passenger Detail</font></h2>
+   
     <form id="passengerForm" action="index.php" method="post"> <!-- Changed action to index.php -->
-        <table class="table">
+        <table class="table" style="margin:24px">
             <tr>
                 <th style="width:100px;border-top:0px;">SNo.</th>
                 <th style="width:200px;border-top:0px;"> Name</th>
@@ -260,7 +301,7 @@
 
 <div>
     <br>
-    <p><font color="red">CHILDREN BELOW 5 YEAR (FOR WHOM TICKET IS NOT TO BE ISSUED).</font></p>
+   
 </div>
 
 <script>

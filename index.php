@@ -13,7 +13,7 @@
 	color: white;
 }
 html { 
-  background: url(img/bg7.jpg) no-repeat center center fixed; 
+  background: url(img/bg11.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -46,7 +46,7 @@ $conn = new mysqli($servername, $username, $password, $database, $port);
 include("header.php"); ?>
 <div id="main"><div id="logo">
 <A HREF="index.php">
-<IMG SRC="img/logo.png" alt="Home" id="logo" width="150" height="150"></IMG>
+<IMG SRC="img/logo1.png" alt="Home" id="logo" width="150" height="150"></IMG>
 </A></div>
 <h1 align="center">Welcome to Indian Railways!</h1><br/><br/><br/>
 <h2 align="center">Have a safe journey with us</h2>

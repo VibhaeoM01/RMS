@@ -13,7 +13,7 @@
         <script>
             $(document).ready(function(){
               $("#Logout").hide();
-            };
+            });
             $(document).ready(function(){
                 $("#user").hover(function(){
                     $("#Logout").toggle("slow");
@@ -29,7 +29,6 @@
             <li><A HREF="index.php">Home</A></li>
             <li><A HREF="pnrstatus.php">PNR Status</A></li>
             <li><a href="booktkt.php">Book a ticket</a></li>
-            <li><a href="logout.php">Logout</a></li>
             <li><?php  
 				if(isset($_SESSION['user_info'])){
 					echo '<div id="dropdown">'.$_SESSION['user_info'].'<div id="Logout" style="display:none">Logout</div>';
@@ -38,9 +37,17 @@
 					echo '<A HREF="login.php">Login/Register</A>';
 				?>
 			</li>
+            
+          
             </ul>
           </div>
         </div>
+        <ul style="float: right;     
+    text-decoration: none;
+    background-color: #0e0c0cc7;
+    padding: 4px;
+    font-size:20px;
+   "><a href="logout.php">Logout</a></ul>
       </div>
 </body>
 </html>
