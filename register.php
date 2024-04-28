@@ -89,7 +89,7 @@ if(isset($_POST['submit'])) {
 <LINK REL="STYLESHEET" HREF="STYLE.CSS">
 <style type="text/css">
 *	{
-	color: #222;
+	color: black;
 }
 #register_form	{
 	background-color: white;
@@ -98,9 +98,10 @@ if(isset($_POST['submit'])) {
 	border-radius: 25px;
 	border: 2px solid blue; 
 	margin-top: 25px;
+	color:black;
 }
 #nav	{
-	color: white;
+	color: black; 	
 }
 #logintext	{
 	margin-top: 10px;

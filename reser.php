@@ -260,15 +260,26 @@
 		  -o-background-size: cover;
 		  background-size: cover;
 		}   
+     
+        .display {
+            color: white;
+    position: absolute;
+    left: 35%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+}
+
+        
     </style>
 </head>
 <body>
 <?php
 		include ('header.php');
 	?>
-                    <h1 style="text-align: center;">Provide your information</h1>
+                    <h1 style="    display: flex; justify-content: center; color:white;">Provide your information</h1>
 <div class="display">
-    <h2><font color="blue">Passenger Detail</font></h2>
+    <h2><font color="white" style="    display: flex;
+    justify-content: center;">Passenger Detail</font></h2>
    
     <form id="passengerForm" action="index.php" method="post"> <!-- Changed action to index.php -->
         <table class="table" style="margin:24px">
