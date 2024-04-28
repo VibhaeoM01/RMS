@@ -35,7 +35,7 @@
 					echo '<div id="dropdown">'.$_SESSION['user_info'].'<div id="Logout" style="display:none">Logout</div>';
         }
 				else
-					echo '<A HREF="login.php">Login/Register</A>';
+					echo '<A HREF="login.php">User Login</A>';
 				?>
 			</li>
             

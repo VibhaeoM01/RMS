@@ -1,14 +1,15 @@
-/* CSS styles for the admin login page */
-
-.container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    text-align: center;
+*
+{
+    color:black;
 }
+
+    .full   {
+        border: 1px solid;
+        width: 555px;
+        text-align: center;
+        margin: 100px auto;
+      
+    } 
 
 h2 {
     margin-bottom: 20px;
@@ -21,15 +22,15 @@ label {
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    width: 31%;
+    padding: 3px;
+    margin-bottom: 5px;
+    border: 1px solid black;
     border-radius: 5px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: #007bff; /* Blue color */
     color: #fff;
     border: none;
